@@ -100,19 +100,21 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <Mail size={18} className="text-orange mt-0.5 flex-shrink-0" />
                   <a
-                    href="mailto:skyweb.conetwork@gmail.com"
+                    href="mailto:business@skyweb.net.in"
                     className="text-white/70 text-sm hover:text-orange transition-colors duration-300"
                   >
-                    skyweb.conetwork@gmail.com
+                    business@skyweb.net.in
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone size={18} className="text-orange mt-0.5 flex-shrink-0" />
                   <a
-                    href="tel:02269718266"
+                    href="https://wa.me/918097681293"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white/70 text-sm hover:text-orange transition-colors duration-300"
                   >
-                    02269718266
+                    +91 80976 81293
                   </a>
                 </li>
                 <li className="flex items-start gap-3">

@@ -38,10 +38,10 @@ const reasons = [
     },
     {
         icon: Handshake,
-        title: 'Reliable ISP & Technology Partners',
-        description:
-            'Strategic partnerships with leading providers ensure best-in-class service delivery.',
-    },
+        title: 'Reliable ISP & Network Partners',
+        description: 'We work closely with trusted local ISP providers to deliver reliable internet connectivity and network solutions for businesses.'
+    }
+    ,
     {
         icon: MessageCircle,
         title: 'Transparent Communication',
@@ -174,8 +174,7 @@ export default function WhyChooseUs() {
                                     : 'opacity-0 translate-y-6'
                                     }`}
                             >
-                                Six compelling reasons to partner with us for your IT and
-                                connectivity needs
+                                Six reasons why businesses choose SKYWEBIX for reliable internet and network services.
                             </p>
                         </div>
 

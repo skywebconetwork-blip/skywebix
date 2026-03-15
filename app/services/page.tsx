@@ -12,23 +12,24 @@ import {
     Check,
     ArrowRight,
 } from 'lucide-react';
+import CTASection from '@/components/sections/CTASection';
 
 const services = [
     {
         icon: Wifi,
-        title: 'Enterprise Internet Solutions',
-        image: '/images/service-internet.png',
+        title: 'Enterprise Internet Connectivity',
+        image: '/images/Enterprice-Connectivity.jpeg',
         shortDescription:
-            'High-speed, dedicated internet connectivity with SLA-backed uptime.',
+            'High-speed dedicated internet solutions designed for businesses that require reliable and uninterrupted connectivity.',
         fullDescription:
-            'Our Enterprise Internet Solutions provide high-speed, dedicated internet connectivity with SLA-backed uptime for enterprises, offices, and institutions. We ensure your business stays connected with reliable, high-performance internet that scales with your needs.',
+            'Enterprise Internet Connectivity provides high-speed dedicated internet solutions designed for businesses that require reliable and uninterrupted connectivity. Our solutions ensure stable performance, fast data transfer, and SLA-backed uptime to keep your operations running smoothly.',
         features: [
             'Dedicated leased line connectivity',
+            'High-speed business internet',
+            'Reliable and uninterrupted connectivity',
             '99.9% uptime SLA guarantee',
-            'Symmetric upload/download speeds',
-            '24/7 network monitoring',
             'Scalable bandwidth options',
-            'Priority technical support',
+            '24/7 technical support',
         ],
     },
     {
@@ -97,6 +98,23 @@ const services = [
             'Implementation planning',
             'Vendor selection',
             'Project management',
+        ],
+    },
+    {
+        icon: Network,
+        title: 'ISP Coordination & Network Management',
+        image: '/images/Network-Management.jpeg', // Fallback
+        shortDescription:
+            'We coordinate with multiple internet service providers to ensure stable connectivity.',
+        fullDescription:
+            'Our ISP Coordination & Network Management service ensures seamless connectivity by coordinating with multiple internet service providers. We focus on maintaining stable network performance, minimizing downtime, and ensuring faster issue resolution for businesses.',
+        features: [
+            'Coordination with multiple ISPs',
+            'Stable and reliable connectivity',
+            'Faster issue resolution',
+            'Network performance monitoring',
+            'Downtime minimization',
+            'Proactive network support',
         ],
     },
 ];
@@ -261,45 +279,19 @@ export default function Services() {
                             ))}
                         </div>
 
-                        {/* CTA */}
-                        <div
-                            className={`mt-32 text-center relative overflow-hidden bg-navy-500 rounded-[3rem] p-12 lg:p-24 transition-all duration-700 delay-500 ${isVisible
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-12'
-                                }`}
-                        >
-                            {/* CTA Background Pattern */}
-                            <div className="absolute inset-0 opacity-10">
-                                <Image
-                                    src="/images/services-hero.png"
-                                    alt="Background"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-
-                            <div className="relative z-10">
-                                <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-                                    Ready to Elevate Your Connectivity?
-                                </h2>
-                                <p className="text-white/70 text-lg mb-12 max-w-2xl mx-auto">
-                                    Our experts are ready to design a custom framework that perfectly
-                                    aligns with your operational goals.
-                                </p>
-                                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                                    <Link href="/contact" className="btn-primary px-10 py-5 text-lg">
-                                        Schedule a Consultation
-                                        <ArrowRight size={20} className="ml-2" />
-                                    </Link>
-                                    <Link href="tl:02269718266" className="text-white font-semibold hover:text-orange transition-colors">
-                                        Call Us: 02269718266
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
+
+            <CTASection
+                title="Ready to Elevate Your Connectivity?"
+                description="Our experts are ready to design a custom solution that perfectly aligns with your operational goals — from leased lines to fully managed networks."
+                primaryLabel="Schedule a Consultation"
+                primaryHref="/contact"
+                secondaryLabel="Call Us Now"
+                secondaryHref="https://wa.me/918097681293"
+                secondaryExternal
+            />
         </main>
     );
 }

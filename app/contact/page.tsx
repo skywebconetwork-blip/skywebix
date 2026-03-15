@@ -14,14 +14,14 @@ const contactInfo = [
     {
         icon: Mail,
         label: 'Email',
-        value: 'skyweb.conetwork@gmail.com',
-        href: 'mailto:skyweb.conetwork@gmail.com',
+        value: 'business@skyweb.net.in',
+        href: 'mailto:business@skyweb.net.in',
     },
     {
         icon: Phone,
-        label: 'Phone',
-        value: '02269718266',
-        href: 'tel:02269718266',
+        label: 'WhatsApp',
+        value: '+91 80976 81293',
+        href: 'https://wa.me/918097681293',
     },
     {
         icon: MapPin,
@@ -102,7 +102,7 @@ export default function Contact() {
                     message: '',
                 });
             } else {
-                setError(result.error?.message || result.error || 'Failed to send message. Please try again.');
+                setError(result.error?.message || result.error || 'Failed to submit Qu. Please try again.');
             }
         } catch (err) {
             console.error('Submission error:', err);
@@ -241,7 +241,7 @@ export default function Contact() {
                                         }`}
                                 >
                                     <h3 className="text-2xl font-bold text-navy-500 mb-2">
-                                        Send us a Message
+                                        Send Us Your Query
                                     </h3>
                                     <p className="text-navy-600/70 mb-8">
                                         Fill out the form below and we'll get back to you shortly.
@@ -331,7 +331,7 @@ export default function Contact() {
                                                         onChange={handleChange}
                                                         disabled={isLoading}
                                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all duration-300 disabled:opacity-50"
-                                                        placeholder="02269718266"
+                                                        placeholder="+91 80976 81293"
                                                     />
                                                 </div>
                                                 <div>
@@ -389,7 +389,7 @@ export default function Contact() {
                                                     </span>
                                                 ) : (
                                                     <>
-                                                        Send Message
+                                                        Submit Query
                                                         <Send size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                                                     </>
                                                 )}

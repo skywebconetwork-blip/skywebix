@@ -9,6 +9,7 @@ import {
     Shield,
     Zap,
 } from 'lucide-react';
+import CTASection from '@/components/sections/CTASection';
 
 const values = [
     {
@@ -180,47 +181,74 @@ export default function About() {
                         </div>
 
                         {/* Mission & Vision Section */}
-                        <div className="grid md:grid-cols-2 gap-8 mb-32">
+                        <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto mb-20">
                             {/* Mission Card */}
                             <div
-                                className={`group p-10 bg-light-blue rounded-3xl transition-all duration-700 delay-400 border border-transparent hover:border-orange/20 hover:shadow-xl ${isVisible
-                                    ? 'opacity-100 translate-y-0'
-                                    : 'opacity-0 translate-y-10'
+                                className={`group relative bg-white rounded-3xl px-7 py-8 min-h-[180px] transition-all duration-700 delay-400 border border-slate-100 hover:shadow-2xl hover:shadow-orange/5 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                                     }`}
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-orange/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                                    <Target size={32} className="text-orange" />
+                                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+
+                                    {/* Image */}
+                                    <div className="relative w-28 h-28 shrink-0 rounded-2xl overflow-hidden border-2 border-orange/10 shadow-inner">
+                                        <Image
+                                            src="/images/about-who-we-are.png"
+                                            alt="Our Mission"
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div>
+                                        <div className="flex items-center gap-3 mb-3">
+                                            <Target size={22} className="text-orange" />
+                                            <h3 className="text-xl font-bold text-navy-500">Our Mission</h3>
+                                        </div>
+                                        <p className="text-navy-600/70 text-sm md:text-base leading-relaxed">
+                                            To simplify business connectivity and IT management across
+                                            India by providing reliable, scalable, and cost-effective
+                                            solutions.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-2xl font-bold text-navy-500 mb-4">
-                                    Our Mission
-                                </h3>
-                                <p className="text-navy-600/70 text-lg leading-relaxed">
-                                    To simplify business connectivity and IT management across
-                                    India by providing reliable, scalable, and cost-effective
-                                    solutions that empower organizations to achieve their full
-                                    potential.
-                                </p>
+
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-orange/5 rounded-bl-[4rem] -z-0 pointer-events-none transition-all group-hover:bg-orange/10" />
                             </div>
 
                             {/* Vision Card */}
                             <div
-                                className={`group p-10 bg-navy-500 rounded-3xl transition-all duration-700 delay-500 hover:shadow-2xl hover:shadow-navy-500/20 ${isVisible
-                                    ? 'opacity-100 translate-y-0'
-                                    : 'opacity-0 translate-y-10'
+                                className={`group relative bg-navy-500 rounded-3xl px-7 py-8 min-h-[180px] transition-all duration-700 delay-500 hover:shadow-2xl hover:shadow-navy-500/20 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                                     }`}
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-orange/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                                    <Eye size={32} className="text-orange" />
+                                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+
+                                    {/* Image */}
+                                    <div className="relative w-28 h-28 shrink-0 rounded-2xl overflow-hidden border-2 border-white/10 shadow-inner">
+                                        <Image
+                                            src="/images/vision.webp"
+                                            alt="Our Vision"
+                                            fill
+                                            className="object-cover opacity-90 group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div>
+                                        <div className="flex items-center gap-3 mb-3">
+                                            <Eye size={22} className="text-orange" />
+                                            <h3 className="text-xl font-bold text-white">Our Vision</h3>
+                                        </div>
+                                        <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                                            To become India's most trusted IT and connectivity partner,
+                                            known for reliability, innovation, and customer success.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                                <p className="text-white/70 text-lg leading-relaxed">
-                                    To become India's most trusted IT and connectivity partner,
-                                    known for our reliability, innovation, and commitment to
-                                    customer success.
-                                </p>
+
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-bl-[4rem] -z-0 pointer-events-none transition-all group-hover:bg-white/10" />
                             </div>
                         </div>
-
                         {/* Our Values */}
                         <div className="relative">
                             <div className="text-center mb-16">
@@ -271,6 +299,16 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+            <CTASection
+                title="Serving businesses across Mumbai, Maharashtra, and across India."
+                description="From startups in Navi Mumbai to enterprises nationwide, we deliver reliable connectivity your business depends on."
+                primaryLabel="Get in Touch"
+                primaryHref="/contact"
+                secondaryLabel="Call Us Now"
+                secondaryHref="https://wa.me/918097681293"
+                secondaryExternal
+            />
         </main>
     );
 }
